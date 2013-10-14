@@ -1,4 +1,4 @@
-SbPHP - PHP framework for kids
+SBPHP - PHP framework for kids
 ==============================
 
 The SpongeBob PHP framework. 
