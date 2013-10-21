@@ -1,0 +1,5 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule  ^admin/(.*)$  admin.php/$1
+RewriteRule ^v/(.*)$ phpinfo.php/$i$
+</IfModule>

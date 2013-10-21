@@ -1,0 +1,37 @@
+.left {
+	background: #FAFAFA;
+	background-image: linear-gradient(to bottom, #FFFFFF, #F2F2F2);
+	background-repeat: repeat-x;
+	border-right: 1px solid #D4D4D4;
+	border-bottom: 1px solid #D4D4D4;
+	padding-left: 5px;
+	height: 100%;
+	position: relative;
+}
+
+.row-fluid [class*="span"] {
+    -moz-box-sizing: border-box;
+    display: block;
+    float: left;
+    min-height: 30px;
+    margin-left:0%;
+}
+
+.row-fluid .span10 {
+    width: 83.5%;
+    margin-right: 0px;
+    margin-left:0px;
+}
+.row-fluid .span2 {
+    width: 221px;
+}
+
+.pull-left h3{
+	font-size: 24.5px;
+	 margin:  0;
+}
+
+.onclickbg{
+  background-color: #FF9933 !important;
+  color: #ffffff !important;
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$SYSNAME}</title>
+		<script src="../../js/basic/jquery-1.9.1.js"></script>
+		<script src="../../js/admin/menu.js"></script>
+	</head>
+	<body>
+		<div class="container-fluid">
+			<div class="navbar-inner">
+				<div class="pull-left" style="margin-top:10px">
+					<a>系统配置->菜单管理</a>
+				</div>
+				<div class="pull-right" style="margin-top:5px">
+					<a href="#myModal" role="button" class="btn btn-primary" data-toggle="modal">添加菜单</a>
+				</div>
+			</div>
+			<div id='myTable'>
+				<table class="table">
+					<thead>
+						<tr>
+							<th style="border-left: 1px solid #2D89EF;">Name</th>
+							<th class="right">Time CP</th>
+							<th class="right">Network</th>
+							<th class="right">Traffic</th>
+							<th style="border-right: 1px solid #2D89EF;">Tiles update</th>
+						</tr>
+					</thead>
+
+					<tbody>
+						<tr>
+							<td>Bing</td><td class="right">0:00:01</td><td class="right">0,1 Mb</td><td class="right">0 Mb</td><td class="right">0,1 Mb</td>
+						</tr>
+						<tr>
+							<td>Internet Explorer</td><td class="right">0:00:01</td><td class="right">0,1 Mb</td><td class="right">0 Mb</td><td class="right">0,1 Mb</td>
+						</tr>
+						<tr>
+							<td>Chrome</td><td class="right">0:00:01</td><td class="right">0,1 Mb</td><td class="right">0 Mb</td><td class="right">0,1 Mb</td>
+						</tr>
+						<tr>
+							<td>News</td><td class="right">0:00:01</td><td class="right">0,1 Mb</td><td class="right">0 Mb</td><td class="right">0,1 Mb</td>
+						</tr>
+						<tr>
+							<td>Weather</td><td class="right">0:00:01</td><td class="right">0,1 Mb</td><td class="right">0 Mb</td><td class="right">0,1 Mb</td>
+						</tr>
+						<tr>
+							<td>Music</td><td class="right">0:00:01</td><td class="right">0,1 Mb</td><td class="right">0 Mb</td><td class="right">0,1 Mb</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+		<!-- Modal -->
+		<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+					×
+				</button>
+				<h3 id="myModalLabel">添加菜单</h3>
+			</div>
+			<div class="modal-body">
+				<div class="control-group">
+					<label class="control-label" for="inputname">上级菜单</label>
+					<div class="controls">
+						<select>
+							<option>1</option>
+							<option>1</option>
+							<option>1</option>
+							<option>1</option>
+						</select>
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label" for="inputname">菜单名</label>
+					<div class="controls">
+						<input type="text" id="inputname" placeholder="6～8个字符">
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label" for="inputadd">URL地址</label>
+					<div class="controls">
+						<input type="text" id="inputadd" placeholder="URL地址">
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button class="btn" data-dismiss="modal" aria-hidden="true">
+					关闭
+				</button>
+				<button class="btn btn-primary" onclick="saveData()">
+					Save changes
+				</button>
+			</div>
+		</div>
+	</body>
+</html>

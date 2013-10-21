@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$SYSNAME}</title>
+		<script src="../../js/basic/jquery-1.9.1.js"></script>
+		<script src="../../js/admin/main.js"></script>
+	</head>
+	<body style="overflow:hidden">
+		<div class="navbar" style="margin-bottom: 0px;" id="top">
+			{widget name="commWidget" html="head" dir="admin"}
+		</div>
+		<div class="row-fluid">
+			<div class="metrouicss span2 left" id="left">
+				<div class="page-sidebar" id="memu">
+					<ul style="overflow: visible;">
+						<li class="sticker sticker-color-orange dropdown">
+							<a href="javascript:void(0);"><i class="icon-wrench"></i>系统配置</a>
+							<ul class="sub-menu light sidebar-dropdown-menu open">
+								<li>
+									<a href="/admin/menu/index" target="main"><i class="icon-list"></i>菜单管理</a>
+								</li>
+							</ul>
+						</li>
+						<li class="sticker sticker-color-orange dropdown">
+							<a href="javascript:void(0);"><i class="icon-user"></i>权限管理</a>
+							<ul class="sub-menu light sidebar-dropdown-menu open">
+								<li>
+									<a href="http://www.sina.com.cn" target="main"><i class="icon-user-2"></i>用户设置</a>
+								</li>
+							</ul>
+						</li>
+						
+						<li class="sticker sticker-color-orangeDark">
+							<a href="#"><i class="icon-clipboard"></i> 食谱</a>
+						</li>
+						<li class="sticker sticker-color-green">
+							<a href="http://www.163.com" target="main"><i class="icon-history"></i> 爱好</a>
+						</li>
+						<li class="sticker sticker-color-pink dropdown">
+							<a><i class="icon-list"></i> 要做的</a>
+							<ul class="sub-menu light sidebar-dropdown-menu open">
+								<li>
+									<a href="#"><i class="icon-history"></i>今天</a>
+								</li>
+								<li>
+									<a href="#">工作清单</a>
+								</li>
+								<li>
+									<a href="#">下班后要做的</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="span10" id='right' style=" margin-left:0px;">
+				<iframe name="main" src="" height="100%" width="100%" style="border: none;" ></iframe>
+			</div>
+		</div>
+	</body>
+</html>
+<script type="text/javascript">
+	$(document).ready(function() {
+		var h = $(window).height() - $("#top").height();
+		var w = $(window).width() - $("#left").width() - 8;
+		$("#left").css('height', h + 'px');
+		$("#right").css('height', h + 'px');
+		$("#right").css('width', w + 'px').css('float', 'right');
+
+		$("#memu li a").each(function() {
+			$(this).click(function() {
+				$("#memu li a").each(function() {
+					$(this).removeClass("onclickbg");
+				});
+				$(this).addClass("onclickbg");
+			});
+		});
+
+		if ($("#memu").height() > h) {
+			$("#left").css('overflow-y', 'scroll').css('overflow-x', 'hidden');
+		}
+
+	});
+
+</script>
